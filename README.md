@@ -14,7 +14,7 @@ To install the Sentiment Analyzer, follow these steps:
 1. Clone the repository from GitHub: `git clone https://github.com/arifzanko/sentiment-analyzer.git`
 2. Navigate to the project directory: `cd sentiment-analyzer`
 3. Create a `.env` file in the project directory.
-4. Inside the `.env` file, add the following lines:
+4. Inside the `.env` file, add the following lines, you can obtain your authorization token from huggingface website:
 ```python
 API_URL=https://api-inference.huggingface.co/models/cardiffnlp/twitter-roberta-base-sentiment-latest
 AUTHORIZATION_TOKEN=YOUR_AUTHORIZATION_TOKEN_HERE
