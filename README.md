@@ -13,5 +13,9 @@ Sentiment analysis, also known as opinion mining, is a natural language processi
 To install the Sentiment Analyzer, follow these steps:
 1. Clone the repository from GitHub: `git clone https://github.com/arifzanko/sentiment-analyzer.git`
 2. Navigate to the project directory: `cd sentiment-analyzer`
-3. Install dependencies: `pip install -r requirements.txt`
-4. Run the application: `python app.py`
+3. Create a `.env` file in the project directory.
+4. Inside the `.env` file, add the following lines:
+API_URL=https://api-inference.huggingface.co/models/cardiffnlp/twitter-roberta-base-sentiment-latest
+AUTHORIZATION_TOKEN=YOUR_AUTHORIZATION_TOKEN_HERE
+5. Install dependencies: `pip install -r requirements.txt`
+6. Run the application: `python app.py`
