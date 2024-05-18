@@ -1,5 +1,3 @@
-# sentiment-analyzer
-
 # Sentiment Analyzer
 
 ## Description
