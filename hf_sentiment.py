@@ -12,6 +12,7 @@ authorization_token = os.getenv("AUTHORIZATION_TOKEN")
 headers = {"Authorization": authorization_token}
 loaded_model = joblib.load('decision_tree_model.joblib')
 
+THRESHOLD = 0.5
 CSV_FILE = 'datasets.csv'
 
 
@@ -83,7 +84,11 @@ def collect_data(input):
         if output is not None and output:  # Check if output is not None and not empty
             data = prepare_data(output[0])
             if data is not None:  # Check if data is not None
-                pred_to_csv(data, CSV_FILE)
+                above_threshold = any(isinstance(item, (int, float)) and item > THRESHOLD for item in data)
+                if above_threshold:
+                    pred_to_csv(data, CSV_FILE)
+                else:
+                    print("Did not exceed the threshold.")
             else:
                 print("Data preparation failed. CSV file not updated.")
         else:
@@ -140,9 +145,6 @@ def sentiment_analysis(input):
     except Exception as e:
         print(f"An error occurred during sentiment analysis: {e}")
         return None
-
-
-
 
 
 
