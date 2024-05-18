@@ -15,11 +15,11 @@ To install the Sentiment Analyzer, follow these steps:
 2. Navigate to the project directory: `cd sentiment-analyzer`
 3. Create a `.env` file in the project directory.
 4. Inside the `.env` file, add the following lines:
-You can obtain your authorization token from huggingface website
 ```python
 API_URL=https://api-inference.huggingface.co/models/cardiffnlp/twitter-roberta-base-sentiment-latest
 AUTHORIZATION_TOKEN=YOUR_AUTHORIZATION_TOKEN_HERE
 ```
+You can obtain your authorization token from huggingface website
 5. Install dependencies: `pip install -r requirements.txt`
 6. Run the Fast API: `uvicorn new_api:app --reload`
 7. Open another CLI and run the Streamlit application: `streamlit run app.py`
