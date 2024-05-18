@@ -20,4 +20,5 @@ API_URL=https://api-inference.huggingface.co/models/cardiffnlp/twitter-roberta-b
 AUTHORIZATION_TOKEN=YOUR_AUTHORIZATION_TOKEN_HERE
 ```
 5. Install dependencies: `pip install -r requirements.txt`
-6. Run the application: `python app.py`
+6. Run the Fast API: `uvicorn new_api:app --reload`
+7. Open another CLI and run the Streamlit application: `streamlit run app.py`
